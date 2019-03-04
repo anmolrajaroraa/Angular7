@@ -1,0 +1,30 @@
+Angular - Complete framework
+
+1. Component based development
+2. SPA (in-built routing)
+3. CLI
+4. Validations
+5. Animations
+6. Ajax support
+7. 3rd party integration support
+8. Unit testing, cross-browser testing support
+9. MVC Architecture
+10. Filters(pipes), directives
+
+
+TypeScript (Microsoft) vs Dart (Google) vs JavaScript
+TypeScript - 2011 - JavaScript that uitilizes data types, JavaScript that scales
+TSCompiler -> Compile TS into JS
+Extension->A.ts file -> A.map.js (webpack)  ->A.js file
+tsconfig file
+
+npm install -g typescript
+
+
+
+
+
+
+
+Please take this survey :)
+https://goo.gl/forms/5VcOCPcLUz0OBv8i1
