@@ -19,24 +19,63 @@ e = true;
 
 var f:string|number = "hello";
 f = 100;
+
+function show():void{
+    return;
+}
+
+function callShow():void{
+    show();
+}
+
+function bug():never{
+    throw new Error("I am a bug");
+}
+
+var balance:number = 0;
+if(balance < 0){
+    bug();
+}
+
+
+
 //f = true;
 var arr:string[] = ["Mike", "John"];
 var arr2:(string|number)[] = ["john", "mike", "emily", 100];
-var obj:{id:number,name:string} = {id:101, name: "John Smith"};
-var obj2:{id:number,name:string} = {id:102,name:"Mike"};
-var obj3:{id:number, name:string} = {id:103, name:"Emily"};
+
+type mytype = {id:number, name:string}
+
+var obj:mytype = {id:101, name: "John Smith"};
+var obj2:mytype = {id:102,name:"Mike"};
+//var obj3:mytype = {id:103};
+
+
+
+var num:number = 1000;
+num = 0;
+var str:string = "hello";
+str = "";
+
+
+console.log(obj);
 
 var tuple1:[number, string, boolean] = [101,"John Smith",true];
 tuple1[1] = "Mike";
 console.log(tuple1);
 
 enum MyColor{
-    RED = 100,
+    RED = 101,
     GREEN = 200,
     BLUE = 300
 }
 
-var colorVar:MyColor = MyColor.GREEN;
+var colorVar:MyColor;
+if(MyColor.RED == 100){
+    colorVar = MyColor.RED;
+}
+else{
+    colorVar = MyColor.GREEN;
+}
 console.log("You selected " + colorVar);
 //colorVar = "orange";
 

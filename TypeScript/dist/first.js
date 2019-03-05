@@ -16,21 +16,52 @@ e = "hello";
 e = true;
 var f = "hello";
 f = 100;
+function show() {
+    return;
+}
+function callShow() {
+    show();
+}
+function bug() {
+    throw new Error("I am a bug");
+}
+var balance = 0;
+if (balance < 0) {
+    bug();
+}
 //f = true;
 var arr = ["Mike", "John"];
 var arr2 = ["john", "mike", "emily", 100];
 var obj = { id: 101, name: "John Smith" };
 var obj2 = { id: 102, name: "Mike" };
-var obj3 = { id: 103, name: "Emily" };
+//var obj3:mytype = {id:103};
+var num = 1000;
+num = 0;
+var str = "hello";
+str = "";
+console.log(obj);
 var tuple1 = [101, "John Smith", true];
 tuple1[1] = "Mike";
 console.log(tuple1);
 var MyColor;
 (function (MyColor) {
-    MyColor[MyColor["RED"] = 100] = "RED";
+    MyColor[MyColor["RED"] = 101] = "RED";
     MyColor[MyColor["GREEN"] = 200] = "GREEN";
     MyColor[MyColor["BLUE"] = 300] = "BLUE";
 })(MyColor || (MyColor = {}));
-var colorVar = MyColor.GREEN;
+var colorVar;
+if (MyColor.RED == 100) {
+    colorVar = MyColor.RED;
+}
+else {
+    colorVar = MyColor.GREEN;
+}
 console.log("You selected " + colorVar);
 //colorVar = "orange";
+switch (colorVar) {
+    case MyColor.RED:
+        console.log("I am red");
+        break;
+    case MyColor.GREEN:
+        console.log("I am green");
+}
