@@ -1,5 +1,53 @@
+<h4>Using refs</h4>
+<input type="text" placeholder="Type first number" #first>
+<input type="text" placeholder="Type second number" #second>
+<button (click)=doAdd(first.value,second.value)>Add</button>
+<p>Result is {{result}}</p>
+<hr>
 <h1>I am HTML coming from HTML file</h1>
 <h2>I am H2</h2>
-<p>{{str}}</p>
+<p>{{str|uppercase}}</p>
 <h3 class="green">I am using green CSS class</h3>
-<h3 [class]="myCssClass">I am also using green CSS class</h3>
+<h3 [class]="myCssClass" [innerText]="str">I am using yellow class</h3>
+<input type="text" (input)="takeInput($event)" placeholder="Type something here to change value of str">
+<br>
+<textarea name="ta" (input)="takeInput($event)" id="ta" cols="30" rows="10"></textarea>
+<br>
+<h1 [hidden]="isHide">I can hide</h1>
+<button [disabled]="isHide">New button</button>
+<button (click)="toggleShowHide()">Toggle hidden property</button>
+<hr>
+<h3 [ngClass]="{'green':counter>=10,'yellow':counter<10}">Testing ngClass directive</h3>
+<h3 [ngStyle]="{'background-color':counter>=10?'red':'orange'}">Testing ngStyle directive</h3>
+<button (click)="incrementCounter()">Increment counter</button>
+<p>Counter is {{counter}}</p>
+<hr>
+<p>If else example</p>
+<div *ngIf="counter>5; then login else logout">
+    <h3>Ng if works....</h3>
+</div>
+<ng-template #login>
+    <div>Login</div>
+</ng-template>
+<ng-template #logout>
+    <div>Logout</div>
+</ng-template>
+<hr>
+Counter is {{counter}}
+<div [ngSwitch]="counter">
+    <p *ngSwitchCase="1">John</p>
+    <p *ngSwitchCase="2">Mike</p>
+    <p *ngSwitchCase="3">Emily</p>
+    <p *ngSwitchCase="4">Bob</p>
+    <p *ngSwitchDefault>Unknown</p>
+</div>
+<hr>
+<ul *ngFor="let name of names; let i=index">
+    <li>{{i+1}} &nbsp; {{name}}</li>
+</ul>
+<hr>
+<p>{{str|uppercase}}</p>
+<p>{{str|lowercase}}</p>
+<p>{{str|titlecase}}</p>
+<p>{{currentDate}}</p>
+<p>{{currentDate|date}}</p>

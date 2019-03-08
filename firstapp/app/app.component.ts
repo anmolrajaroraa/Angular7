@@ -7,10 +7,38 @@ import { Component } from '@angular/core';
   styleUrls:["app.component.css"]
 })
 export class AppComponent {
+  
   str:string;
   myCssClass:string;
+  isHide:boolean;
+  counter:number;
+  result:number;
+  names:string[];
+  currentDate:object;
+  
   constructor(){
     this.str = "I am a string";
     this.myCssClass = "yellow";
+    this.isHide = false;
+    this.counter = 0;
+    this.result = 0;
+    this.names = ["John", "Mike", "Emily", "Bob"];
+    this.currentDate = new Date();
+  }
+
+  toggleShowHide():void{
+    this.isHide = !this.isHide;
+  }
+
+  takeInput(event):void{
+    this.str = event.target.value;
+  }
+
+  incrementCounter():void{
+    (this.counter)++;
+  }
+
+  doAdd(x:string, y:string):void{
+    this.result =  parseInt(x) + parseInt(y);
   }
 }
