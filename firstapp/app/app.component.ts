@@ -15,6 +15,9 @@ export class AppComponent {
   result:number;
   names:string[];
   currentDate:object;
+  obj:{id:number, name:string};
+  fakeJson;
+  salary:number;
   
   constructor(){
     this.str = "I am a string";
@@ -24,6 +27,9 @@ export class AppComponent {
     this.result = 0;
     this.names = ["John", "Mike", "Emily", "Bob"];
     this.currentDate = new Date();
+    this.obj = {id:101, name:"John"};
+    this.fakeJson = {"id":"101","name":"John","contact":[{"contact1":"123"},{"contact2":"789"}]}
+    this.salary = 100000000.9877;
   }
 
   toggleShowHide():void{

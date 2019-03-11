@@ -1,3 +1,14 @@
+<app-c1></app-c1>
+<br>
+<br>
+<br>
+<br>
+<br>
+Calling Child Component
+<app-child1></app-child1>
+<app-child2></app-child2>
+<app-child5></app-child5>
+<hr>
 <h4>Using refs</h4>
 <input type="text" placeholder="Type first number" #first>
 <input type="text" placeholder="Type second number" #second>
@@ -51,3 +62,13 @@ Counter is {{counter}}
 <p>{{str|titlecase}}</p>
 <p>{{currentDate}}</p>
 <p>{{currentDate|date}}</p>
+<p>{{currentDate|date:'fullDate'}}</p>
+<p>{{currentDate|date:'short'}}</p>
+<p>{{currentDate|date:'long'}}</p>
+<p>{{currentDate|date:'fullTime'}}</p>
+<p>{{currentDate|date:'dd-MM-yyyy - hh:mm:ss a Z'}}</p>
+<p>Slice {{"Anmol"|slice:1:5}}</p> <!-- {{name|slice:index from where you want to start:at what position you want to stop}} -->
+<p>Object is {{obj|json}}</p> 
+<p>Json is {{fakeJson|json}}</p>
+<p>Salary is {{salary|number:'4.3'}}</p>
+<p>Salary is {{salary|currency:'INR'}}</p>
