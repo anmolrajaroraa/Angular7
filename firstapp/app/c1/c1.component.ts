@@ -25,4 +25,8 @@ export class C1Component implements OnInit, OnDestroy {
 
   }
 
+  callMe(dataFromChild){
+    this.message = dataFromChild;
+  }
+
 }
