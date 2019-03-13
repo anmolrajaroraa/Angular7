@@ -1,0 +1,5 @@
+<div class="container">
+    <app-input (first)="getFirstInput($event)" (second)="getSecondInput($event)"></app-input>
+    <app-operators (operator)="getOperationName($event)"></app-operators>
+    <app-output [result]="total"></app-output>
+</div>
