@@ -1,3 +1,4 @@
+import { MyService } from './services/MyService';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,7 +13,7 @@ import { Child1Component } from './child1/child1.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [MyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

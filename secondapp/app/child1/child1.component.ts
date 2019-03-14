@@ -1,3 +1,4 @@
+import { MyService } from './../services/MyService';
 import { AppComponent } from '../app.component';
 import { Component, OnInit } from '@angular/core';
 
@@ -5,12 +6,13 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-child1',
   templateUrl: './child1.component.html',
   styleUrls: ['./child1.component.css']
+  ,providers:[MyService]
 })
 export class Child1Component implements OnInit {
 
   public message:string;
   private confidentialInfo:string;
-  constructor() { 
+  constructor(private myService:MyService) { 
     this.message = "Default message";
   }
 
@@ -23,5 +25,7 @@ export class Child1Component implements OnInit {
     parentObject.callParent();
   }
 
-
+  getData(){
+    this.message = this.myService.getMessage();
+  }
 }
