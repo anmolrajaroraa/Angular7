@@ -1,0 +1,11 @@
+<p>
+    child1 works!
+</p>
+<input type="text" #txt placeholder='Send Data'>
+<button (click)="sendIt(txt.value)">Send to Child2</button>
+<br>
+<ul>
+    <li *ngFor="let i of items">
+        {{i.id | prefix:'YES'}} {{i.name}} {{i.price}} <img src="{{i.url}}">
+    </li>
+</ul>

@@ -1,0 +1,21 @@
+<p>With out rx </p>
+<button id="bt">Click</button>
+<p>With Rx</p>
+<button (click)="doInterval()">Interval</button>
+<button id="bt2">Click with Rx</button>
+<button (click)="disconnect()">UnSubscribe</button>
+<button (click)="callService()">Call Service</button>
+<ul>
+    <li *ngFor="let a of arr">
+        {{a|json}}
+    </li>
+</ul>
+
+<br><br>
+<hr>
+<h2>Component Pub /Sub</h2>
+<app-child1></app-child1>
+<br>
+<app-child2></app-child2>
+<br>
+<app-child3></app-child3>
